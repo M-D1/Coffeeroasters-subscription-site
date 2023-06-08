@@ -3,9 +3,10 @@ import arrow from '../assets/plan/desktop/icon-arrow.svg'
 import useMultiRefs from '../utils'
 import { useEffect } from 'react';
 
+
 function Plan() {
    const [multiRef,addMultiRef] = useMultiRefs()
-
+   
   
    const [st ,setSt] = useState(null)
    const [windowWidth,setWindowWidth] = useState(window.innerWidth)
@@ -81,13 +82,15 @@ function Plan() {
    }
 
    function activeClick(e, num){
-      const elements = multiRef()
-      
-      
+      // const elements = multiRef()
+ 
+
+
+      e.target.parentElement.classList.toggle('active')
       
        
    }
-   console.log(obj)
+   // console.log(obj)
   
  return (
   <>
@@ -151,7 +154,7 @@ function Plan() {
                  <img ref={addMultiRef} src={arrow} alt='' className={`${windowWidth >= 850 && 'arrow'}`}  />
             </div>
             <div className={`f ${windowWidth >= 850 ?'' :'hide'}`} ref={addMultiRef}  >
-               <div onClick={(e) => activeClick(e,1)}>
+               <div  onClick={(e) => activeClick(e,1)}>
                   <h3>Capsule</h3>
                   <p>Compatible with Nespresso systems and similar brewers</p>
                </div>
@@ -159,7 +162,7 @@ function Plan() {
                   <h3>Filter</h3>
                   <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
                </div>
-               <div onClick={(e) =>activeClick(e,3)}>
+               <div  onClick={(e) =>activeClick(e,3)}>
                   <h3>Espresso</h3>
                   <p>Dense and finely ground beans for an intense, flavorful experience</p>
                </div>
@@ -171,15 +174,15 @@ function Plan() {
             </div>
 
             <div className='f hide' ref={addMultiRef}  >
-               <div onClick={activeClick}>
+               <div  onClick={activeClick}>
                   <h3>Single origin</h3>
                   <p> Distinct, high quality coffee from a specific family-owned farm</p>
                </div>
-               <div onClick={activeClick}>
+               <div  onClick={activeClick}>
                   <h3>Decaf</h3>
                   <p>Just like regular coffee, except the caffeine has been removed</p>
                </div>
-               <div onClick={activeClick}>
+               <div  onClick={activeClick}>
                   <h3>Blended</h3>
                   <p>Combination of two or three dark roasted beans of organic coffees</p>
                </div>
@@ -189,11 +192,11 @@ function Plan() {
                  <img  ref={addMultiRef} src={arrow} alt=''  />
             </div>
             <div className='f hide' ref={addMultiRef}  >
-               <div onClick={activeClick}>
+               <div  onClick={activeClick}>
                   <h3>250g</h3>
                   <p> Perfect for the solo drinker. Yields about 12 delicious cups.</p>
                </div>
-               <div onClick={activeClick}>
+               <div  onClick={activeClick}>
                   <h3>500g</h3>
                   <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
                </div>
@@ -202,7 +205,7 @@ function Plan() {
                   <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
                </div>
             </div>
-            <div  className='Q'  onClick={() => handleClick(4)}>
+            <div   className='Q'  onClick={() => handleClick(4)}>
                  <h3 > Want us to grind them?</h3>
                  <img  ref={addMultiRef} src={arrow} alt=''  />
             </div>
@@ -211,11 +214,11 @@ function Plan() {
                   <h3>Wholebean</h3>
                   <p> Best choice if you cherish the full sensory experience</p>
                </div>
-               <div onClick={activeClick}>
+               <div  onClick={activeClick}>
                   <h3>Filter</h3>
                   <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
                </div>
-               <div onClick={activeClick}>
+               <div  onClick={activeClick}>
                   <h3>Cafetiére</h3>
                   <p>Course ground beans specially suited for french press coffee</p>
                </div>
