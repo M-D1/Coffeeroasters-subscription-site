@@ -1,0 +1,291 @@
+:root {
+ --Dark-Cyan: #0e8784;
+ --Dark-Grey-Blue: #333d4b;
+ --Pale-Orange: #fdd6ba;
+ --Light-Cream: #fefcf7;
+ --Grey: #83888f;
+
+}
+/* elements that have the same styles */
+
+
+.create--a--plan p,
+.plan p{
+  font-size: .9375rem;
+  opacity: .8;
+  line-height: 1.66;
+}
+.create--a--plan,.plan{
+  background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* creae--a--plan */
+.create--a--plan{
+  background-image: url('./assets/plan/mobile/image-hero-blackcup.jpg');
+
+  color: var(--Light-Cream);
+  padding: 6.3125em 1.5em 8.5em 1.5em;
+  border-radius: 6px;
+  text-align: center;
+}
+.create--a--plan h1{
+ font-size: 2.5rem;
+ margin-bottom: .55em;
+}
+
+/* plan */
+
+.plan{
+ background-color: var(--Dark-Grey-Blue);
+ color: var(--Light-Cream);
+ text-align: center;
+ padding: 5em 1.5em;
+ margin-top: 7.5em;
+ border-radius: 6px;
+ background-image: url('./assets/plan/mobile/bg-steps.png');
+  margin-bottom: 7.5em;
+}
+.plan span{
+ font-size: 4.5rem;
+ color: var(--Pale-Orange);
+ 
+}
+
+.plan h2{
+ font-size: 1.75rem;
+ margin-bottom: 0.8571em;
+}
+.plan p{
+ opacity: 1;
+ margin-bottom: 3.733em;
+}
+
+/* questions */
+.Q{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-bottom: 2em;
+ 
+}
+.stps{
+  display: none;
+}
+
+.Q h3{
+ font-size: 1.5rem;
+ color: var(--Grey);
+ width: 67%;
+}
+.Q img{
+ transition: all .3s ease-in-out;
+}
+
+.arrow{
+ transform: rotate(180deg);
+
+}
+.f{
+  margin-top: 2em;
+  
+}
+
+.f div{
+  background-color: #f4f1eb;
+  padding: 1.5em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+
+}
+
+.f .active{
+  background-color: var(--Dark-Cyan);
+}
+ .f .active h3,
+ .f .active p{
+  color: var(--Light-Cream);
+ }
+
+ .f h3{
+  font-size: 1.5rem;
+  color: var(--Dark-Grey-Blue);
+  margin-bottom: .333em;
+}
+ .f p{
+  color: var(--Dark-Grey-Blue);
+}
+ .questions .f.hide {
+   display: none;
+  
+ }
+
+/* summary */
+
+.summary{
+  background-color: var(--Dark-Grey-Blue);
+  color: var(--Light-Cream);
+  padding: 2em 1.5em;
+}
+.summary h4{
+  opacity: .5;
+  margin-bottom: .5em;
+}
+.summary p{
+  font-size: 1.5rem;
+}
+/* submit */
+.submit{
+  text-align: center;
+}
+.submit button{
+  border-radius: 6px;
+  border: none;
+  font-size: 1.125rem;
+  margin-top: 3.9446em;
+  background: var(--Dark-Cyan);
+  padding: .8em 1.944em;
+  color: var(--Light-Cream);
+}
+
+/* tablet-design */
+
+@media(min-width:559px){
+  .create--a--plan{
+    background-image: url('./assets/plan/tablet/image-hero-blackcup.jpg');
+    text-align: left;
+    padding-left: 3.625em;
+  }
+  .create--a--plan h1{
+    font-size: 3rem;
+
+  }
+  .create--a--plan p{
+    width: 398px;
+  }
+  /* plan */
+  .plan{
+    text-align: left;
+    background-image: url('./assets/plan/tablet/bg-steps.png');
+  }
+  .plan .progress--bar{
+    margin-bottom: 3em;
+  }
+  .plan .progress--bar div{
+    z-index: 1;
+    width: 95%;
+    left: 14px;
+    top:19px;
+    height: 3px;
+  }
+   .plan .progress--bar span{
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+  }
+  .plan .flx{
+    display: flex;
+    align-items: center;
+    gap:.625em
+
+  }
+  .plan h2{
+    margin-top: 1.5em;
+  }
+  /* questions */
+  .f{
+    display: flex;
+    gap: .625em;
+  }
+  
+  .f div{
+    height: 43.6vh;
+  }
+  .questions .f h3{
+    margin-bottom: 1em;
+  }
+  .questions .f p{
+    line-height: 1.6;
+  }
+  /* summary */
+  .summary{
+    padding: 1.6875em 2.75em;
+  }
+
+ 
+}
+
+/* desktop-design */
+@media(min-width:850px){
+  .create--a--plan{
+    background-image: url('./assets/plan/desktop/image-hero-blackcup.jpg');
+  }
+  .create--a--plan p{
+    width: 27.8125rem;
+  }
+  /* plan */
+  .plan{
+    padding: 6.25em 9.375em 6.25em 5.3125em;
+  }
+  .plan h2{
+    width: 14rem;
+  }
+  .plan p{
+    width:256px;
+  }
+
+  .plan .flx{
+    /* gap: 5.9375em; */
+    gap: 3em;
+    
+  }
+  /* questions */
+  .questions > div{
+    display: flex;
+    /* gap: 7.8125em; */
+    
+  }
+  .stps{
+    display: block;
+  }
+  .Q ,.f{
+    width: 45.625em;
+    /* width: 700px; */
+    margin-bottom: 5.5em;
+  }
+  /* .Q{
+    justify-content:flex-start;
+  } */
+  .Q h3{
+    font-size: 2.5rem;
+    width: 39.5rem;
+  }
+  
+  .stps span{
+    display: inline-block;
+    margin-right: 1.16em;
+    color: var(--Grey);
+  }
+  .stps p{
+    font-size: 1.5rem;
+    width: 13.9375em;
+    color: var(--Dark-Grey-Blue);
+    opacity: .5;
+    
+  }
+  .stps .active{
+    
+    opacity: 1;
+  }
+  .stps .active span{
+    color: var(--Dark-Cyan);
+  }
+  
+
+  .f div{
+    height: 15.625rem;
+  }
+}

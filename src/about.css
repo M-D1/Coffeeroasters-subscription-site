@@ -1,0 +1,291 @@
+:root {
+ --Dark-Cyan: #0e8784;
+ --Dark-Grey-Blue: #333d4b;
+ --Pale-Orange: #fdd6ba;
+ --Light-Cream: #fefcf7;
+ --Grey: #83888f;
+
+}
+/* elements that have same styles */
+.about--us p,
+.our--commitment p,
+.quality p{
+ font-size: .9375rem;
+ opacity: .8;
+ line-height: 1.66;
+
+}
+.about--us{
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* about--us */
+
+.about--us{
+ background-image: url('./assets/about/mobile/image-hero-whitecup.jpg');
+ text-align: center;
+ color: var(--Light-Cream);
+ background-size: cover;
+ padding: 6.9375em 1.5em 5.4375em 1.5em;
+ border-radius: 6px;
+}
+.about--us p{
+
+ margin-top: 1.6em;
+}
+
+/* our--commitment */
+.our--commitment{
+ margin-top: 7.5em;
+ text-align: center;
+}
+
+
+.commitment--pic{
+ width: 100%;
+ border-radius: 6px;
+}
+
+
+.our--commitment h2{
+ font-size: 2rem;
+ color: var(--Dark-Grey-Blue);
+ margin-top: 1.5em;
+ margin-bottom: 0.9375em;
+}
+
+.our--commitment p{
+
+ color: var(--Dark-Grey-Blue);
+
+ margin-bottom: 8em;
+ padding-bottom: 8em;
+}
+
+/* quality */
+.quality{
+ display: flex;
+ flex-direction: column;
+ background-color: var(--Dark-Grey-Blue);
+ color: var(--Light-Cream);
+ text-align: center;
+ position: relative;
+ border-radius: 6px;
+ padding: 0 1.5em;
+}
+.quality div:last-child{
+ order: -1;
+}
+
+.quality div:last-child img{
+ width: 88%;
+ position: absolute;
+ transform: translate(-50%,-57%);
+ border-radius: 6px;
+}
+
+.quality h3{
+ font-size:1.75rem;
+ margin-top: 4.125em;
+ margin-bottom: .78em;
+
+}
+
+.quality p{
+ color: var(--Light-Cream);
+ padding-bottom: 4.066em;
+}
+
+/* our--headquarters */
+
+.our--headquarters{
+ text-align: center;
+ margin-top: 7.5em;
+ 
+}
+
+.our--headquarters h4{
+ font-size: 1.5rem;
+ color: var(--Grey);
+ margin-bottom: 3.125em;
+}
+.our--headquarters h5{
+ font-size: 1.75rem;
+ color: var(--Dark-Grey-Blue);
+ margin-top: 2.61em;
+ margin-bottom: 1.23em;
+}
+.our--headquarters > div div{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.our--headquarters > div div img{
+ order: -1;
+}
+
+.our--headquarters p{
+ color: var(--Dark-Grey-Blue);
+ margin-bottom: .4em;
+ 
+}
+.our--headquarters .number{
+  margin-bottom: 5em;
+}
+
+
+/* tablet-design */
+@media(min-width:559px){
+  /* about--us */
+ .about--us{
+  background-image: url('./assets/about/tablet/image-hero-whitecup.jpg');
+  
+
+   text-align: left;
+ }
+
+ .about--us p{
+  width: 398px;
+ }
+
+ /* our--commitment */
+
+ .our--commitment{
+  display: flex;
+  align-items: center;
+  gap: 4.3125em;
+  text-align: left;
+ }
+ .commitment--pic{
+  height: 82vh;
+  width: 36.6vw;
+  content: url('./assets/about/tablet/image-commitment.jpg');
+ }
+
+ .our--commitment p{
+  padding: 0;
+ }
+
+ /* quality */
+ .quality{
+  margin-top: 16em;
+ }
+ .quality h3{
+  font-size: 2rem;
+  margin-top: 5.3125em;
+ }
+ .quality p{
+  width:80%;
+  margin:  0 auto;
+ }
+ 
+/* our--headquarters */
+.our--headquarters{
+  text-align: left;
+}
+.our--headquarters > div{
+  display: flex;
+  gap: 5em;
+}
+.our--headquarters > div div{
+  align-items: flex-start;
+}
+.our--headquarters h5{
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+}
+
+/* desktop-design */
+
+@media(min-width:850px){
+  .about--us{
+    background-image: url('./assets/about/desktop/image-hero-whitecup.jpg');
+  }
+  .about--us h1{
+    font-size: 2.5rem;
+  }
+  .about--us p{
+    font-size: 1rem;
+    width: 445px;
+  }
+
+  /* our--commitment */
+  .our--commitment h2{
+    font-size: 2.5rem;
+    margin-bottom: .8em;
+   
+  }
+  .our--commitment p{
+    font-size: 1rem;
+  }
+
+  .commitment--pic{
+    content: url('./assets/about/desktop/image-commitment.jpg');
+    height: 63.51vh;
+    width: 30.9vw;
+  }
+
+
+
+  /* quality */
+  .quality{
+    flex-direction: row;
+    text-align: left;
+    gap:1em;
+   
+  }
+  .quality h3{
+    font-size:2.5rem;
+    margin-top: 2.2em;
+  }
+
+  .quality p {
+    width: auto;
+    margin: 0;
+  }
+  .quality div:last-child{
+    order: 1;
+  }
+  .quality div:last-child img{
+    content: url('./assets/about/desktop/image-quality.jpg');
+    width: 30vw;
+    position: relative;
+    transform: translate(0%,-21%);
+  }
+
+
+  /* our--headquarters */
+  .our--headquarters h5{
+    font-size: 2rem;
+  }
+  .our--headquarters > div{
+    gap:5.9375em;
+  }
+}
+
+@media (min-width:1200px) {
+  .quality{
+
+    padding:  0 5.3125em;
+  }
+  .quality p{
+    width: 33.75rem;
+  }
+
+}
+@media(min-width:1300px){
+  .quality{
+    gap:5em ;
+  }
+}
+@media (min-width:1440px) {
+  .quality{
+     
+      gap:7.8125rem;
+  }
+}
