@@ -50,7 +50,9 @@ function Plan() {
          elements[0].children[0].classList.add('active')
          // toggiling active and hide class on the img and the div
          elements[1].classList.toggle('arrow')
-         elements[2].classList.toggle('hide')
+         elements[2].classList.toggle('hide') 
+      
+         
       }
       else if(id === 2){
           // adding active class to the steps div to tell the user which one they are opening 
@@ -58,6 +60,9 @@ function Plan() {
          // toggiling active and hide class on the img and the div
          elements[3].classList.toggle('arrow')
          elements[4].classList.toggle('hide')
+       
+
+         
       }
       else if(id === 3){
          // adding active class to the steps div to tell the user which one they are opening 
@@ -65,6 +70,7 @@ function Plan() {
          // toggiling active and hide class on the img and the div
          elements[5].classList.toggle('arrow')
          elements[6].classList.toggle('hide')
+        
       }
       else if(id === 4) {
          // adding active class to the steps div to tell the user which one they are opening 
@@ -92,7 +98,7 @@ function Plan() {
 
    function activeClick(e){
       const elements = multiRef()
-    
+          
      
       for(const el of elements[2].children ){
          

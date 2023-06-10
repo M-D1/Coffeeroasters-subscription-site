@@ -230,15 +230,23 @@
   .summary{
     padding: 1.6875em 2.75em;
   }
+  /* modal */
   .modal--container{
     width: 33.75rem;
+    height: 37.3125rem;
     display: none;
+    margin: 0 auto;
     position: absolute;
     border-radius: 6px;
-    top: 1.875rem;
-    left: 16.1875rem;
+    
+    left: 50%;
+    top: 12%;
+    margin-left: -270px;
+    margin-top: -298.5px;
+  
     z-index: 2;
   }
+
   .modal--container h4{
     font-size: 2.5rem;
     background-image: url('./assets/plan/desktop/bg-modal-top.png');
@@ -263,10 +271,11 @@
   }
   .modal--container .t3rd--div{
     display: flex;
-    gap: 1em;
+    gap: 2em;
+    justify-content: center;
   }
   .modal--container .t3rd--div p{
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #000;
   }
   .modal--container .t3rd--div button{
@@ -310,14 +319,11 @@
   .questions > div{
     display: flex;
     /* gap: 7.8125em; */
+    gap: 3em;
     
   }
-  .stps{
-    display: block;
-  }
-  .stps + div{
-    margin-left: -2em;
-  }
+ 
+  
   .Q ,.f{
     width: 45.625em;
     /* width: 700px; */
@@ -331,6 +337,12 @@
     width: 39.5rem;
   }
   
+  .stps {
+    display: block;
+    position: sticky;
+    top:0;
+    height: 100vh;
+  }
   .stps span{
     display: inline-block;
     margin-right: 1.16em;
@@ -338,10 +350,30 @@
   }
   .stps p{
     font-size: 1.5rem;
-    width: 13.9375em;
+    width: 9.9375em;
     color: var(--Dark-Grey-Blue);
     opacity: .5;
     
+    border-bottom: 1px solid var(--Grey);
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+    
+  
+ 
+
+  .stps p:first-child {
+    
+    padding-top: 0;
+  }
+
+
+ 
+
+  .stps p:last-child {
+    
+    border-bottom: 0;
   }
   .stps .active{
     
