@@ -6,6 +6,9 @@
  --Grey: #83888f;
 
 }
+#root{
+  position: relative;
+}
 /* elements that have the same styles */
 
 
@@ -21,6 +24,10 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+.modal--container .s2nd--div p,
+.modal--container .s2nd--div small{
+  color: var(--Grey);
 }
 /* creae--a--plan */
 .create--a--plan{
@@ -136,6 +143,10 @@
 .summary p{
   font-size: 1.5rem;
 }
+.summary span{
+
+  color: var(--Dark-Cyan);
+}
 /* submit */
 .submit{
   text-align: center;
@@ -149,6 +160,11 @@
   padding: .8em 1.944em;
   color: var(--Light-Cream);
 }
+
+.submit button:disabled{
+  background-color: var(--Grey);
+}
+
 
 /* tablet-design */
 
@@ -214,12 +230,60 @@
   .summary{
     padding: 1.6875em 2.75em;
   }
+  .modal--container{
+    width: 33.75rem;
+    display: none;
+    position: absolute;
+    border-radius: 6px;
+    top: 1.875rem;
+    left: 16.1875rem;
+    z-index: 2;
+  }
+  .modal--container h4{
+    font-size: 2.5rem;
+    background-image: url('./assets/plan/desktop/bg-modal-top.png');
+    color: var(--Light-Cream);
+   
+    padding: 1.2em 0 1em 1.4em;
+  }
+  .modal--container .s2nd--div {
+    background-color: #fff;
+    padding:  3.5em;
+  }
+  .modal--container .s2nd--div p{
+    font-size: 1.5rem;
+    margin-bottom: .4em;
+  }
+  .modal--container .s2nd--div small{
+    display: block;
+    margin-bottom: 2.9375em; 
+  }
+  .modal--container .s2nd--div span{
+    color: var(--Dark-Cyan);
+  }
+  .modal--container .t3rd--div{
+    display: flex;
+    gap: 1em;
+  }
+  .modal--container .t3rd--div p{
+    font-size: 2rem;
+    color: #000;
+  }
+  .modal--container .t3rd--div button{
+    font-size: 1.125rem;
+    padding: .8em  3.54em;
+    background-color: var(--Dark-Cyan);
+    color: var(--Light-Cream);
+    border: none;
+    border-radius: 6px;
+    
+  }
 
  
 }
 
 /* desktop-design */
-@media(min-width:850px){
+@media(min-width:1122px){
   .create--a--plan{
     background-image: url('./assets/plan/desktop/image-hero-blackcup.jpg');
   }
@@ -250,6 +314,9 @@
   }
   .stps{
     display: block;
+  }
+  .stps + div{
+    margin-left: -2em;
   }
   .Q ,.f{
     width: 45.625em;

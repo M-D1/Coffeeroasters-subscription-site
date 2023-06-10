@@ -48,7 +48,7 @@ function NavBar () {
 
 
    <footer>
-    <div>
+    <div className="img--container">
       <img src={logoWhite} alt=""  className="logo"/>
     </div>
     <div>

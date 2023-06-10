@@ -35,7 +35,8 @@ h2,
  h5,
  .plan span,
  .summary p,
-  .stps p{
+  .stps p,
+  .modal--container{
   font-family: 'Fraunces', serif;
 }
 
@@ -678,12 +679,7 @@ ul li{
    
     width: 15.9375rem;
   }
-  /* .how--it--works .pick--your--coffee{
-    width: 36%;
-  }
-  .how--it--works .choose--TH--p{
-    width: 73%;
-  } */
+
 
   /* footer */
   
@@ -695,10 +691,12 @@ ul li{
     gap: 0;
     
   }
-
+  .img--container{
+    width: 34%;
+  }
   footer .logo{
     margin: 0;
-    width: 64%;
+    width: 80%;
   }
   .social--media{
     margin-bottom: 0;
