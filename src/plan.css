@@ -108,6 +108,11 @@
 
 }
 
+.f div:hover,
+.f div:focus{
+  background-color: var(--Pale-Orange);
+}
+
 .f .active{
   background-color: var(--Dark-Cyan);
 }
@@ -166,6 +171,75 @@
 }
 
 
+  /* modal */
+  .modal--container {
+    width: 20.4375rem;
+    height: 37.3125rem;
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 6px;
+
+    left: 50%;
+    top: 11%;
+    margin-left: -163.5px;
+    margin-top: -298.5px;
+
+    z-index: 2;
+  }
+
+  .modal--container h4 {
+    font-size: 1.75rem;
+    background-image: url('./assets/plan/mobile/bg-order-summary.png');
+    color: var(--Light-Cream);
+
+    padding: 1em 0 1em .857em;
+  }
+
+  .modal--container .s2nd--div {
+    background-color: #fff;
+    padding: 2.5em 1.5em 1.5em;
+  }
+
+  .modal--container .s2nd--div p {
+    font-size: 1.5rem;
+    margin-bottom: .4em;
+  }
+
+  .modal--container .s2nd--div small {
+    display: block;
+    font-size: 0.9375rem;
+    margin-bottom: 1.6em;
+    
+  }
+
+  .modal--container .s2nd--div span {
+    color: var(--Dark-Cyan);
+  }
+
+  .modal--container .t3rd--div {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal--container .t3rd--div p {
+    font-size: 1.7rem;
+    color: #000;
+  }
+
+  .modal--container .t3rd--div button {
+    font-size: 1.125rem;
+    padding: .833em 1.77em;
+    background-color: var(--Dark-Cyan);
+    color: var(--Light-Cream);
+    border: none;
+    border-radius: 6px;
+
+  }
+
+
 /* tablet-design */
 
 @media(min-width:559px){
@@ -219,6 +293,7 @@
   
   .f div{
     height: 43.6vh;
+    transition: all .2s ease-in-out;
   }
   .questions .f h3{
     margin-bottom: 1em;
@@ -230,63 +305,36 @@
   .summary{
     padding: 1.6875em 2.75em;
   }
+
   /* modal */
-  .modal--container{
+  .modal--container {
     width: 33.75rem;
-    height: 37.3125rem;
-    display: none;
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 6px;
-    
-    left: 50%;
-    top: 12%;
     margin-left: -270px;
-    margin-top: -298.5px;
-  
-    z-index: 2;
   }
 
-  .modal--container h4{
+  .modal--container h4 {
     font-size: 2.5rem;
     background-image: url('./assets/plan/desktop/bg-modal-top.png');
-    color: var(--Light-Cream);
-   
     padding: 1.2em 0 1em 1.4em;
   }
+
   .modal--container .s2nd--div {
-    background-color: #fff;
-    padding:  3.5em;
+    padding: 3.5em;
   }
-  .modal--container .s2nd--div p{
-    font-size: 1.5rem;
-    margin-bottom: .4em;
+
+ 
+
+  .modal--container .s2nd--div small {
+    margin-bottom: 2.9375em;
   }
-  .modal--container .s2nd--div small{
-    display: block;
-    margin-bottom: 2.9375em; 
-  }
-  .modal--container .s2nd--div span{
-    color: var(--Dark-Cyan);
-  }
-  .modal--container .t3rd--div{
-    display: flex;
-    gap: 2em;
-    justify-content: center;
-  }
+
   .modal--container .t3rd--div p{
-    font-size: 1.7rem;
-    color: #000;
+    font-size: 1.4rem;
   }
-  .modal--container .t3rd--div button{
-    font-size: 1.125rem;
-    padding: .8em  3.54em;
-    background-color: var(--Dark-Cyan);
-    color: var(--Light-Cream);
-    border: none;
-    border-radius: 6px;
-    
+  .modal--container .t3rd--div button {
+    padding: .8em 3.54em;
   }
+
 
  
 }
@@ -326,7 +374,8 @@
   
   .Q ,.f{
     width: 45.625em;
-    /* width: 700px; */
+    
+    cursor: pointer;
     margin-bottom: 5.5em;
   }
   /* .Q{
@@ -386,5 +435,11 @@
 
   .f div{
     height: 15.625rem;
+  }
+}
+
+@media(min-width:1400px) {
+  .questions>div {
+    gap: 7.8125em;
   }
 }

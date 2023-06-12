@@ -95,21 +95,10 @@ function Plan() {
       
     
    }
-
-   function activeClick(e){
+   function activeClick(e,num,className, stateProp){
       const elements = multiRef()
-          
-     
-      for(const el of elements[2].children ){
-         
-         
+       for(const el of elements[num].children ){
           el.classList.remove('active')
-          
-
-
-
-          
-         
       }
       
 
@@ -122,134 +111,36 @@ function Plan() {
          }
         
          
-         const h3 = document.querySelector('.f .active  .user--coffee')
-         console.log(h3)
-         setObj(prev => {
-            return {
-               ...prev,
-               userCoffee: prev.userCoffee = h3.textContent
-            }
-         })
-      }
-       
-   }
-   
-   function activeClick2(e){
-      const elements = multiRef()
-      for(const el of elements[4].children ){
-       el.classList.remove('active')
-       
-      }
-      
+         const h3 = document.querySelector(`.f .active .${className} `)
+        
 
-      e.target.parentElement.classList.toggle('active')
-
-       if( e.target.parentElement.classList.contains('active') ){
-          // writing this statement bc if the user clicked on the blank (white space above the p tag) the app will crash
-          if(e.target.parentElement.classList.contains('f')){
-            return
+         if(document.querySelector('.f .active span')){
+            setPriceOfDelivery(document.querySelector('.f .active  span ').textContent)
          }
-        
-        
-
-         const h3 = document.querySelector('.f .active  .type--of--coffee')
          
          setObj(prev => {
             return {
                ...prev,
-               typeOfCoffee: prev.typeOfCoffee = h3.textContent
+               [stateProp]: prev[stateProp] = h3.textContent
             }
          })
+
       }
-   }
-   
-   function activeClick3(e){
-      const elements = multiRef()
-      for(const el of elements[6].children ){
-         el.classList.remove('active')
-      }
-   
 
-      e.target.parentElement.classList.toggle('active')
-
-      
-       if( e.target.parentElement.classList.contains('active') ){
-          // writing this statement bc if the user clicked on the blank (white space above the p tag) the app will crash
-         if(e.target.parentElement.classList.contains('f')){
-            return
-         }
-        
-
-         const h3 = document.querySelector('.f .active  .amount')
-         
-         setObj(prev => {
-            return {
-               ...prev,
-               amount: prev.amount = h3.textContent
-            }
-         })
-      }
-   }
-   function activeClick4(e){
-      const elements = multiRef()
-      for(const el of elements[8].children ){
-      el.classList.remove('active')
-      }
-      
-
-      e.target.parentElement.classList.toggle('active')
-
-         if( e.target.parentElement.classList.contains('active') ){
-          // writing this statement bc if the user clicked on the blank (white space above the p tag) the app will crash
-         if(e.target.parentElement.classList.contains('f')){
-            return
-         }
-        
-
-         const h3 = document.querySelector('.f .active  .grind')
-         
-         setObj(prev => {
-            return {
-               ...prev,
-               grind: prev.grind = h3.textContent
-            }
-         })
-      }
-   }
-   function activeClick5(e){
-      const elements = multiRef()
-      for(const el of elements[10].children ){
-         el.classList.remove('active')
-      }
-   
-
-      e.target.parentElement.classList.toggle('active')
-         if( e.target.parentElement.classList.contains('active') ){
-          // writing this statement bc if the user clicked on the blank (white space above the p tag) the app will crash
-         if(e.target.parentElement.classList.contains('f')){
-            return
-         }
-        
-
-         const h3 = document.querySelector('.f .active  .time--of--delivery')
-         const p = document.querySelector('.f .active  span ')
+    
        
-         setPriceOfDelivery(p.textContent)
-         setObj(prev => {
-            return {
-               ...prev,
-               oftenDelivery: prev.oftenDelivery = h3.textContent
-            }
-         })
-      }
    }
-   // console.log(obj)
+ 
    function click(){
       const elements = multiRef()
       document.body.scrollTop = 0
       document.documentElement.scrollTop = 0
       elements[11].style.display='block'
     
+   }
+
+   function checkout(){
+      window.location.reload()
    }
  return (
   <>
@@ -313,15 +204,15 @@ function Plan() {
                  <img ref={addMultiRef} src={arrow} alt='' className={`${windowWidth >= 1122 && 'arrow'}`}  />
             </div>
             <div className={`f ${windowWidth >= 1122 ?'' :'hide'}`} ref={addMultiRef}  >
-               <div  onClick={activeClick}>
+               <div  onClick={(e) => activeClick(e,2,'user--coffee','userCoffee')}>
                   <h3 className='user--coffee'>Capsule</h3>
                   <p>Compatible with Nespresso systems and similar brewers</p>
                </div>
-               <div onClick={activeClick}>
+               <div onClick={(e) => activeClick(e,2,'user--coffee','userCoffee')}>
                   <h3 className='user--coffee'>Filter</h3>
                   <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
                </div>
-               <div  onClick={activeClick}>
+               <div  onClick={(e) => activeClick(e,2,'user--coffee','userCoffee')}>
                   <h3 className='user--coffee'>Espresso</h3>
                   <p>Dense and finely ground beans for an intense, flavorful experience</p>
                </div>
@@ -333,15 +224,15 @@ function Plan() {
             </div>
 
             <div className='f hide' ref={addMultiRef}  >
-               <div  onClick={activeClick2}>
+               <div  onClick={(e) => activeClick(e,4,'type--of--coffee','typeOfCoffee')}>
                   <h3 className='type--of--coffee'>Single origin</h3>
                   <p> Distinct, high quality coffee from a specific family-owned farm</p>
                </div>
-               <div  onClick={activeClick2}>
+               <div  onClick={(e) => activeClick(e,4,'type--of--coffee','typeOfCoffee')}>
                   <h3 className='type--of--coffee'>Decaf</h3>
                   <p>Just like regular coffee, except the caffeine has been removed</p>
                </div>
-               <div  onClick={activeClick2}>
+               <div  onClick={(e) => activeClick(e,4,'type--of--coffee','typeOfCoffee')}>
                   <h3 className='type--of--coffee'>Blended</h3>
                   <p>Combination of two or three dark roasted beans of organic coffees</p>
                </div>
@@ -351,15 +242,15 @@ function Plan() {
                  <img  ref={addMultiRef} src={arrow} alt=''  />
             </div>
             <div className='f hide' ref={addMultiRef}  >
-               <div  onClick={activeClick3}>
+               <div  onClick={(e) => activeClick(e,6,'amount','amount')}>
                   <h3 className='amount'>250g</h3>
                   <p> Perfect for the solo drinker. Yields about 12 delicious cups.</p>
                </div>
-               <div  onClick={activeClick3}>
+               <div onClick={(e) => activeClick(e,6,'amount','amount')}>
                   <h3 className='amount'>500g</h3>
                   <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
                </div>
-               <div onClick={activeClick3}>
+               <div onClick={(e) => activeClick(e,6,'amount','amount')}>
                   <h3 className='amount'>1000g</h3>
                   <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
                </div>
@@ -369,15 +260,15 @@ function Plan() {
                  <img  ref={addMultiRef} src={arrow} alt=''  />
             </div>
             <div className='f hide' ref={addMultiRef}  >
-               <div onClick={activeClick4}>
+               <div onClick={(e) => activeClick(e,8,'grind','grind')}>
                   <h3 className='grind'>Wholebean</h3>
                   <p> Best choice if you cherish the full sensory experience</p>
                </div>
-               <div  onClick={activeClick4}>
+               <div  onClick={(e) => activeClick(e,8,'grind','grind')}>
                   <h3 className='grind'>Filter</h3>
                   <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
                </div>
-               <div  onClick={activeClick4}>
+               <div  onClick={(e) => activeClick(e,8,'grind','grind')}>
                   <h3 className='grind'>Cafetiére</h3>
                   <p>Course ground beans specially suited for french press coffee</p>
                </div>
@@ -387,15 +278,15 @@ function Plan() {
                  <img  ref={addMultiRef} src={arrow} alt='' />
             </div>
             <div className='f hide' ref={addMultiRef}  >
-               <div onClick={activeClick5}>
+               <div onClick={(e) => activeClick(e,10,'time--of--delivery','oftenDelivery')}>
                   <h3 className='time--of--delivery'>Every week</h3>
                   <p>$<span>7.20</span> per shipment. Includes free first-class shipping.</p>
                </div>
-               <div onClick={activeClick5}>
+               <div onClick={(e) => activeClick(e,10,'time--of--delivery','oftenDelivery')}>
                   <h3 className='time--of--delivery'>Every 2 weeks</h3>
                   <p> $<span>9.50</span> per shipment. Includes free priority shipping.</p>
                </div>
-               <div onClick={activeClick5}>
+               <div onClick={(e) => activeClick(e,10,'time--of--delivery','oftenDelivery')}>
                   <h3 className='time--of--delivery'>Every month</h3>
                   <p>$<span>12.00</span> per shipment. Includes free priority shipping.</p>
                </div>
@@ -438,10 +329,12 @@ function Plan() {
                   </small>
 
                   <div className='t3rd--div'>
-                     <p>
+                    { windowWidth >= 559 && <p>
                         ${priceOfDelivery}/{priceOfDelivery == 7.20 ? 'week' : priceOfDelivery == 9.50 ? '2 weeks' : 'month'}
-                     </p>
-                     <button>Checkout</button>
+                     </p>}
+                     {windowWidth < 559 ?  <button onClick={checkout}>Checkout {priceOfDelivery}/{priceOfDelivery == 7.20 ? 'week' : priceOfDelivery == 9.50 ? '2 weeks' : 'month'}</button>:
+                     <button onClick={checkout}>Checkout</button>
+                    }
                   </div>
             </div>
          </div>

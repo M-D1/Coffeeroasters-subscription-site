@@ -36,9 +36,11 @@ h2,
  .plan span,
  .summary p,
   .stps p,
-  .modal--container{
+  .modal--container,
+  .modal--container .t3rd--div, button{
   font-family: 'Fraunces', serif;
 }
+
 
 
 
@@ -46,13 +48,28 @@ header img,
 .menu-bar{
   z-index: 2;
 }
-
+/*  */
 .great--coffee{
   background: no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+/* active styles */
+header ul a:hover,
+header ul a:active{
+  color: var(--Dark-Grey-Blue);
+}
+.great--coffee a:hover,
+.great--coffee a:focus,
+.how--it--works a:hover,
+.how--it--works a:focus{
+  background-color: #66d1cf;
+}
+footer ul a:hover,
+footer ul a:focus{
+  color: var(--Light-Cream);
 }
 /* mobile design */
 /* HEADER */
@@ -155,6 +172,7 @@ ul a{
   letter-spacing: 0.923077px;
   text-transform: uppercase;
   color:var(--Dark-Grey-Blue);
+  transition: all .2s ease-in-out;
 }
 ul li:first-child{
   margin-top: 5em;
@@ -205,6 +223,7 @@ ul li{
   color: var(--Light-Cream);
   background-color: var(--Dark-Cyan);
   border-radius: 6px;
+  transition: all .2s ease-in-out;
 }
 
  /* our--collection-div */
@@ -273,7 +292,7 @@ ul li{
    flex-direction: column;
    min-height: 67vh;
    gap: 3.5em;
-   /* padding: 0 2em; */
+   
    border-radius: 8px;
    margin-bottom: 1.5em;
  }
@@ -381,6 +400,7 @@ ul li{
   font-family: 'Barlow', sans-serif;
   font-size: .875rem;
   color: var(--Grey);
+ 
  }
  footer ul li:first-child{
   margin-top: 0;
@@ -404,9 +424,7 @@ ul li{
 
 
 
-/* great--coffee-div , our--collection-div,
-  why--choose--us
-*/
+
 
 
 /* tablet-design */
@@ -449,17 +467,9 @@ ul li{
 
     /* great--coffee */
     .great--coffee {
-
-     
-      
       background-image: url('./assets/home/tablet/image-hero-coffeepress.jpg');
-    
-    
-     
       text-align: left;
       padding: 6.5em 3.625em;
-  
-  
     }
     .great--coffee h1{
       font-size: 3rem;
@@ -579,7 +589,7 @@ ul li{
  
 }
 /* desktop-design */
-@media(min-width:850px){
+@media(min-width:1000px){
   body{
    padding: 3.125em 5em;
   }
