@@ -262,6 +262,7 @@ ul li{
  /* why--choose--us-div */
  .why--choose--us {
    text-align: center;
+   
    background-color: var(--Dark-Grey-Blue);
    padding: 0 1.5em;
    border-radius: 8px;
