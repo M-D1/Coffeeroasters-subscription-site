@@ -19,7 +19,7 @@ function NavBar () {
  return ( 
   <>
    <header>
-    <Link to='.'><img src={logo} alt=""/></Link>
+    <Link to='.'><img src={logo} alt="coffeeRoasters logo"/></Link>
 
     <div ref={menuBarRef} onClick={handleClick} className="menu-bar">
       <span></span>
@@ -49,7 +49,7 @@ function NavBar () {
 
    <footer>
     <div className="img--container">
-      <Link to='.'><img src={logoWhite} alt=""  className="logo"/></Link>
+      <Link to='.'><img src={logoWhite} alt="coffeeRoaster white logo"  className="logo"/></Link>
     </div>
     <div>
       <ul>

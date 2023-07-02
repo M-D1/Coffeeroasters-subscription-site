@@ -361,7 +361,7 @@ ul li{
 
  }
 
- .steps h4 {
+ .steps h3 {
    font-size: 1.75rem;
    color: var(--Dark-Grey-Blue);
    margin-bottom: .85em;
@@ -552,7 +552,7 @@ ul li{
       display: flex;
     }
 
-    .steps h4{
+    .steps h3{
       width: 67%;
       margin-top:1.5em;
       margin-bottom: 1.357em;
@@ -683,7 +683,7 @@ ul li{
 
   /* how--it-works */
 
-  .how--it--works h4{
+  .how--it--works h3{
     font-size: 2rem;
     margin-top: 1.1875em;  
     margin-bottom:1.3125em;  
