@@ -19,7 +19,7 @@ body{
   padding: 2em 1.5em;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: rgba(253, 214, 186, .1);
+  background-color: var(--Light-Cream);
   
 }
 
